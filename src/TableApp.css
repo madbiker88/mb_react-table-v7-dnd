@@ -1,0 +1,95 @@
+div { 
+  padding: 0.5rem;
+}
+  .table {
+    border-spacing: 0;
+    border: 1px solid black;
+  }
+/* tr>last-child>td {
+          border-bottom: 0;
+        }; */
+.thDiv{
+  display:flex;
+  flex-direction: column;
+  /* align-items: stretch; */
+  justify-content: space-between;
+  padding: 0;
+  height: inherit;
+}    
+
+th, 
+ td { text-align:center;
+      margin: 0;
+      padding: 0.5rem;
+      border-bottom: 1px solid black;
+      border-right: 2px solid rgb(133, 146, 99);
+ 
+  }
+
+th last-child ,td last-child {
+        border-right: 0;
+      }
+  
+
+.colDragHandle{
+    background-color: rgb(149, 196, 149);
+    width: 100%;
+    display: block;
+  position: flex-end;
+    margin-right: 0.75rem;
+    cursor: not-allowed;
+    bottom: 0;
+font-size: .5em;
+text-align: center;
+
+justify-items: center;
+padding: 2px;
+  }
+  .colDragHandle .canDrop{
+    background-color: chartreuse;
+  }
+
+  .colDragHandle.colMoveCursor{
+    cursor: grab;
+  }
+
+  .rowDragHandle {
+    padding: .2em 1em ;
+    background-color: rgb(149, 196, 149);
+        cursor: ns-resize;
+   font-size: .6em;
+  }
+  .rowDragHandle .canDrop{
+    background-color: chartreuse;
+  }
+
+.Notes{
+  margin-left:  6em;
+  margin-bottom: 2em;
+  display:block ;
+ white-space: pre-line ;
+  padding:8px 2px;
+  margin: 1em;
+  max-width:700px;
+  border-radius: 0.5em;
+   border:1px solid  rgb(17, 163, 41);
+   padding: 3px
+}
+.resizer {
+  display: inline-block;
+  background: darkgray;
+  width: 2px;
+  
+   height: 90%; 
+ 
+  position: absolute;
+  right: 0;
+  top: 0; 
+  transform: translateX(50%) translateY(0rem);
+  z-index: 1;
+ /* prevents from scrolling while dragging on touch devices  */
+  touch-action:none;
+}
+  .resizer .isResizing {
+    background: red;
+  }
